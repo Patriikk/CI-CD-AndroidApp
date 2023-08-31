@@ -14,7 +14,7 @@ jobs:  # The Things is What will do when pusha and pull trigger
       - name: Setup JDK
         uses: actions/setup-java@v3.12.0
         with: 
-          java-version: 8
+          java-version: 1.8
           distribution: 'zulu'
       - name: Build With Gradle 
         run: ./gradlew clean assembleDebug
