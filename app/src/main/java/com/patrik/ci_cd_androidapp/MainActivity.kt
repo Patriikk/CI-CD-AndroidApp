@@ -18,5 +18,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Developer click me clicked", Toast.LENGTH_SHORT).show()
         }
 
+        // Let's send one more message
+
     }
 }

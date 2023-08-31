@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "542571825590",
+    "project_id": "ci-cd-application-89f8b",
+    "storage_bucket": "ci-cd-application-89f8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542571825590:android:520f8809d472f8fe811917",
+        "android_client_info": {
+          "package_name": "com.patrik.ci_cd_androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542571825590-mlc1olf12706pvsrkdd65md3oosca3nf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq44bMwJnyhxFT_NQSYO8u0otSww7zFFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542571825590-mlc1olf12706pvsrkdd65md3oosca3nf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
