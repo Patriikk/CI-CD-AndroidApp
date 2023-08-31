@@ -30,5 +30,11 @@ jobs:  # The Things is What will do when pusha and pull trigger
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: group-of-killer-developers
           file: app/build/outputs/apk/debug/app-debug.apk
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1146757218407034901/_FSynnoANNcCuuxZIykkfHaTMjSBhs3o54LOjZrzCprtZkSmxzAtwgH9xnE6mfhC-S5S
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed.'
 
                 
