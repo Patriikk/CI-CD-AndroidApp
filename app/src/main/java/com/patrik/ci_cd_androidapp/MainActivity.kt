@@ -8,14 +8,15 @@ import com.patrik.ci_cd_androidapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
 
         binding.btnClickMe.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Developer click me clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Developer click me clicked", Toast.LENGTH_SHORT)
+                .show()
         }
 
         // Let's send one more message
