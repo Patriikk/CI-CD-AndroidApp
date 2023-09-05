@@ -5,7 +5,7 @@ on: # It will Trigger ON
   pull_request: # Every Pull Request  in
     branches: [ master ]  # Master Branch
 
-jobs: # The Things is What will do when pusha and pull trigger
+jobs: # The Things is What will do when push and pull trigger
   build: # build APk
     runs-on: ubuntu-latest # Runs on Ubuntu Machine based on requirement like ios app works on only Macos
     steps:

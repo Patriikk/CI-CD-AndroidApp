@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -48,7 +50,25 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-
     implementation platform('com.google.firebase:firebase-bom:32.2.3')
     implementation 'com.google.firebase:firebase-analytics'
+}
+
+task getDebugAppInDesktopFolder(dependsOn: 'assembleDebug') {
+    doLast {
+        def destinationPath = "/Users/imac/Desktop"
+        def desireName = "CICDApp.apk"
+
+        ext.apk = file("build/outputs/apk/debug/app-debug.apk")
+
+        if (ext.apk.exists()) {
+            copy {
+                from ext.apk.absolutePath
+                into destinationPath
+                rename { desireName }
+            }
+
+        }
+
+    }
 }
