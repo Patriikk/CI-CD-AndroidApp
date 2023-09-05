@@ -1,9 +1,9 @@
 name: Build Android APK & Share QA Team  # Name Of Action
 on: # It will Trigger ON
   push: # Every Pushes code in 
-    branches: [ master ]  # Master Branch
+    branches: [master]  # Master Branch
   pull_request: # Every Pull Request  in
-    branches: [ master ]  # Master Branch
+    branches: [master]  # Master Branch
 
 jobs: # The Things is What will do when push and pull trigger
   build: # build APk
@@ -25,7 +25,7 @@ jobs: # The Things is What will do when push and pull trigger
           path: app/build/outputs/apk/debug/app-debug.apk
       - name: Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.5.1
-        with: 
+        with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: group-of-killer-developers

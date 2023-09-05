@@ -14,9 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
 
+
         binding.btnClickMe.setOnClickListener {
             Toast.makeText(this@MainActivity, "Someone clicked me", Toast.LENGTH_SHORT).show()
         }
+
 
         // Let's send one more message
 
